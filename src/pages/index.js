@@ -1,13 +1,12 @@
 
 import React from "react"
-import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import { Carousel } from "react-bootstrap"
-import Typical from "react-typical"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Spring } from "react-spring/renderprops";
+import ReactTypingEffect from 'react-typing-effect';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -112,17 +111,16 @@ const IndexPage = () => {
                 <h1 id="hero__section">Ahoj! Volám sa Filip.</h1>
                 <h3><span className="hero__line-break">Navrhnem a vytvorím pre Vás{" "}</span>
                   <span>
-                    <Typical
-                      loop={Infinity}
-                      wrapper="b"
-                      steps={[
+                    <ReactTypingEffect
+                      text={[
                         "rýchly",
-                        1200,
                         "spoľahlivý",
-                        1200,
-                        "atraktívny",
-                        1200
+                        "atraktívny"
                       ]}
+                      speed={70}
+                      eraseSpeed={50}
+                      eraseDelay={1200}
+                      typingDelay={200}
                     />{" "}web.
                   </span>
                 </h3>

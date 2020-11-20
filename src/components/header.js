@@ -3,26 +3,13 @@ import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { Container, Navbar, Nav } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { useSpring, animated } from 'react-spring'
 
 import { FiMenu } from 'react-icons/fi'
+import logo from "../images/logo.png"
 
 const Header = () => {
-
-  const data = useStaticQuery(graphql`
-    query {
-      headerLogo: file(relativePath: {eq: "logo.png"}) {
-        id
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   const [isToggled, setToggle] = useState(false)
 
@@ -35,7 +22,7 @@ const Header = () => {
       <Container fluid style={{ padding: 0 }}>
         <Navbar expand="sm">
           <AnchorLink to="/#hero__section" className="navbar-brand">
-            <Img fluid={data.headerLogo.childImageSharp.fluid} alt="Filip Jankech logo" className="header__logo"/>
+            <img src={logo} alt="Filip Jankech logo" className="header__logo"/>
           </AnchorLink>
           <button className="navbar-toggle" onClick={() => setToggle(!isToggled)}>
             <FiMenu />

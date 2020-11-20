@@ -704,6 +704,7 @@ pre tt:after {
   padding-bottom: 7px;
   min-height: 43px;
   z-index: 10;
+  color: #F0F0F0;
 
   @media (min-width: 900px) {
     display: none;
@@ -711,6 +712,7 @@ pre tt:after {
 
   svg {
     font-size: 2.1rem;
+    color: #F0F0F0;
 
     line {
       color: #F0F0F0;
@@ -730,17 +732,18 @@ pre tt:after {
           justify-content: space-between;
   max-width: 1220px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 12px 20px;
 
   .navbar-brand {
     padding-top: 2px;
     padding-bottom: 2px;
     z-index: 20;
-  }
-}
 
-.header__logo {
-  width: 70px;
+    .header__logo {
+      width: 76px;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .header__navbar-container {
@@ -839,6 +842,7 @@ main {
 
     @media (max-width: 575px) {
       margin-top: 3rem;
+      margin-bottom: 2rem !important;
     }
   }
 }
@@ -865,7 +869,7 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -1036,12 +1040,13 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-around;
+      -ms-flex-pack: space-around;
+          justify-content: space-around;
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
@@ -1049,8 +1054,8 @@ main {
   h2 {
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 2.1rem;
-    margin-top: -2rem;
+    font-size: 1.8rem;
+    top: 25%;
     text-align: center;
     max-width: 400px;
     position: absolute;
@@ -1076,6 +1081,13 @@ main {
 }
 
 .tabuga-overlay,
+.pavlis-overlay {
+  h2 {
+    top: 35%;
+  }
+}
+
+.tabuga-overlay,
 .planeta-overlay {
   background: rgb(45,107,119);
   background: -webkit-gradient(linear, left top, right top, from(rgba(32,34,37,1)), to(rgba(45,107,119,1)));
@@ -1092,7 +1104,8 @@ main {
 }
 
 .projects__tech-wrapper {
-  margin-top: 5rem;
+  position: absolute;
+  top: 57%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,15 +1123,10 @@ main {
   }
 }
 
-.planeta-overlay {
-  .projects__tech-wrapper {
-    margin-top: 8rem;
-  }
-}
-
+.planeta-overlay,
 .ambulance-overlay {
   .projects__tech-wrapper {
-    margin-top: 8rem;
+    top: 60%;
   }
 }
 
@@ -1331,6 +1339,7 @@ main {
   bottom: 0;
   right: 0%;
   width: 30%;
+  max-width: 520px;
   position: absolute;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -1612,7 +1621,11 @@ select:-webkit-autofill:focus {
   text-align: center;
 
   h1 {
-    margin-top: 10rem;
+    margin-top: 14rem;
+
+    @media (max-width: 619px) {
+      margin-top: 10rem;
+    }
   }
 
   p {

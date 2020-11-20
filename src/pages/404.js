@@ -11,7 +11,7 @@ const NotFoundPage = () => {
       <SEO title="Stránka nenájdená" />
       <section className="not-found">
         <h1>Hľadaná stránka neexistuje</h1>
-        <p>Každý sa občas dostane do slepej uličky. Kliknite na tlačidlo nižšie a objavte správnu cestu.</p>
+        <p>Každý sa občas dostane do slepej uličky. Kliknite na tlačidlo nižšie a objavte správnu cestu. &#128578;</p>
         <div className="not-found__button-wrapper">
           <Link to="/">Späť na hlavnú stránku</Link>
         </div>
