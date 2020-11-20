@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import { Carousel } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Spring } from "react-spring/renderprops";
-import ReactTypingEffect from 'react-typing-effect';
+import Typewriter from 'typewriter-effect';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -109,19 +109,27 @@ const IndexPage = () => {
             {(props) => 
               <section className="hero__section" style={{ ...props }}>
                 <h1 id="hero__section">Ahoj! Volám sa Filip.</h1>
-                <h3><span className="hero__line-break">Navrhnem a vytvorím pre Vás{" "}</span>
-                  <span>
-                    <ReactTypingEffect
-                      text={[
-                        "rýchly",
-                        "spoľahlivý",
-                        "atraktívny"
-                      ]}
-                      speed={70}
-                      eraseSpeed={50}
-                      eraseDelay={1170}
-                      typingDelay={30}
-                    />{" "}web.
+                <h3 className="inline-1"><span className="hero__line-break">Navrhnem a vytvorím pre Vás &nbsp;</span>
+                  <span className="inline">
+                    <Typewriter
+                      onInit={(typewriter) => {
+                        typewriter
+                          .typeString("rýchly")
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .typeString("spoľahlivý")
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .typeString("atraktívny")
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .start()
+                      }}
+                      options={{
+                        autoStart: true,
+                        loop: true
+                      }}
+                    />&nbsp; web.
                   </span>
                 </h3>
                 <h3 className="hero__deal">Dohodnuté?</h3>

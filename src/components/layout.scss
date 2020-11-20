@@ -360,7 +360,8 @@ h3 {
   }
 
   @media (max-width: 559px) {
-    font-size: 1.7rem !important;
+    font-size: 1.5rem !important;
+    font-weight: 400;
   }
 }
 h4 {
@@ -740,7 +741,7 @@ pre tt:after {
     z-index: 20;
 
     .header__logo {
-      width: 76px;
+      width: 4.22rem;
       margin-bottom: 0;
     }
   }
@@ -1191,6 +1192,7 @@ main {
 
     h3 {
       font-size: 1.7rem !important;
+      font-weight: 600 !important;
 
       @media (max-width: 619px) {
         font-size: 1.5rem !important;
@@ -1661,6 +1663,17 @@ select:-webkit-autofill:focus {
   }
 }
 
+.inline,
+.inline-1 {
+  display: flex;
+}
+
+.inline-1 {
+  @media (max-width: 779px) {
+    display: inline;
+  }
+}
+
 // BOOTSTRAP CORRECTION
 
 @media (min-width: 576px) {
@@ -1671,7 +1684,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   font-weight: 600 !important;
 }
 
