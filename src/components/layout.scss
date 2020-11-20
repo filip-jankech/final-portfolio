@@ -748,7 +748,7 @@ pre tt:after {
 }
 
 .header__navbar-container {
-  width: 103%;
+  width: 102%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -758,7 +758,7 @@ pre tt:after {
 
   @media (max-width: 899px) {
     position: absolute;
-    margin-left: -18px;
+    margin-left: -20px;
     background: rgb(45,107,119);
     background: -webkit-gradient(linear, left top, right top, from(#202225), to(rgba(45,107,119,1)));
     background: -o-linear-gradient(left, #202225 0%, rgba(45,107,119,1) 100%);
