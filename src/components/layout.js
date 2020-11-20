@@ -1,16 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
 
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import Header from "./header"
-import "./layout.css"
+import "./layout.scss"
+
+import { RiFacebookBoxFill } from 'react-icons/ri'
+import { AiFillInstagram } from 'react-icons/ai'
+import { RiLinkedinBoxFill } from 'react-icons/ri'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,26 +20,54 @@ const Layout = ({ children }) => {
           title
         }
       }
+      footerLogo: file(relativePath: {eq: "logo.png"}) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
+
+
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <div className="site-content">
+        <main>
+          {children}
+        </main>
+        <footer>
+          <div className="footer__container">
+            <div className="footer__social-wrapper invisible">
+              <RiFacebookBoxFill />
+              <RiLinkedinBoxFill />
+              <AiFillInstagram />
+            </div>
+            <div className="footer__disclaimer">
+              <AnchorLink to="/#hero__section" className="footer__link">
+                <div className="footer__logo-wrapper">
+                  <Img fluid={data.footerLogo.childImageSharp.fluid} className="footer__logo" alt="Filip Jankech logo" />
+                </div>
+                <span>Filip Jankech</span>
+              </AnchorLink>
+              <span className="footer__claim">© {new Date().getFullYear()} | všetky práva vyhradené</span>
+            </div> 
+            <div className="footer__social-wrapper">
+              <a href="https://www.facebook.com/fillip.jankech" target="_blank" rel="noopener noreferrer">
+                <RiFacebookBoxFill />
+              </a>
+              <a href="https://www.linkedin.com/in/filip-jankech" target="_blank" rel="noopener noreferrer">
+                <RiLinkedinBoxFill />
+              </a>
+              <a href="https://www.instagram.com/filipjankech" target="_blank" rel="noopener noreferrer">
+                <AiFillInstagram />
+              </a>
+            </div>
+          </div>
         </footer>
       </div>
     </>
