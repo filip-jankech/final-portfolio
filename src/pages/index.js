@@ -119,7 +119,7 @@ const IndexPage = () => {
                       ]}
                       speed={70}
                       eraseSpeed={50}
-                      eraseDelay={1200}
+                      eraseDelay={1170}
                       typingDelay={30}
                     />{" "}web.
                   </span>
