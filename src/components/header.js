@@ -17,12 +17,18 @@ const Header = () => {
     transform: isToggled ? 'translateY(250px)' : 'translateY(-276px)'
   })
 
+  const hideNav = () => {
+    if (isToggled === true) {
+      setToggle(false)
+    }
+  }
+
   return (
     <header id="header">
       <Container fluid style={{ padding: 0 }}>
         <Navbar expand="sm">
           <AnchorLink to="/#hero__section" className="navbar-brand">
-            <img src={logo} alt="Filip Jankech logo" className="header__logo"/>
+            <img src={logo} alt="Filip Jankech logo" className="header__logo" onClick={() => hideNav()} />
           </AnchorLink>
           <button className="navbar-toggle" onClick={() => setToggle(!isToggled)}>
             <FiMenu />

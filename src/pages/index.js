@@ -109,8 +109,9 @@ const IndexPage = () => {
             {(props) => 
               <section className="hero__section" style={{ ...props }}>
                 <h1 id="hero__section">Ahoj! Volám sa Filip.</h1>
-                <h3 className="inline-1"><span className="hero__line-break">Navrhnem a vytvorím pre Vás &nbsp;</span>
+                <h3 className="inline-1"><span className="hero__line-break">Navrhnem a vytvorím pre &nbsp;</span>
                   <span className="inline">
+                    Vás &nbsp;
                     <Typewriter
                       onInit={(typewriter) => {
                         typewriter
