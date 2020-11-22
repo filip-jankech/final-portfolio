@@ -5,6 +5,15 @@ module.exports = {
     author: `Filip Jankech`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-QNHEWKKFFW",
+        head: true,
+        anonymize: true,
+        pageTransitionDelay: 0,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {

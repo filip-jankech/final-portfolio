@@ -7,6 +7,7 @@ import { Carousel } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Spring } from "react-spring/renderprops";
 import Typewriter from 'typewriter-effect';
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -135,8 +136,8 @@ const IndexPage = () => {
                 </h3>
                 <h3 className="hero__deal">Dohodnuté?</h3>
                 <div className="hero__button-wrapper">
-                  <AnchorLink to="/#projects__section" title="Moja práca" className="button-secondary" />
-                  <AnchorLink to="/#form__section" title="Dohodnuté" className="button-primary hero__button-2" />
+                  <AnchorLink to="/#projects__section" title="Zistiť viac" className="button-secondary" />
+                  <AnchorLink to="/#form__section" title="Ozvite sa!" className="button-primary hero__button-2" />
                 </div>
                 <div className="hero__circles-wrapper">
                   <SvgDot className="hero__circle-1" />
@@ -163,7 +164,7 @@ const IndexPage = () => {
                 }}
               >
                 {(props) => 
-                  <a href="https://tabuga.cz/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
+                  <OutboundLink href="https://tabuga.cz/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
                     <div className="projects__overlay tabuga-overlay">
                       <h2>Tabuga</h2>
                       <div className="projects__tech-wrapper">
@@ -173,7 +174,7 @@ const IndexPage = () => {
                       </div>
                       <Img fluid={data.tabuga.childImageSharp.fluid} alt="Tabuga" className="projects__img" />
                     </div>
-                  </a>
+                  </OutboundLink>
                 }
               </Spring>
             )}
@@ -190,7 +191,7 @@ const IndexPage = () => {
                 }}
               >
                 {(props) => 
-                  <a href="https://patrikpavlis.com/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
+                  <OutboundLink href="https://patrikpavlis.com/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
                     <div className="projects__overlay pavlis-overlay">
                       <h2>Patrik Pavlis</h2>
                       <div className="projects__tech-wrapper">
@@ -201,7 +202,7 @@ const IndexPage = () => {
                       </div>
                       <Img fluid={data.pavlis.childImageSharp.fluid} alt="Patrik Pavlis" className="projects__img" />
                     </div>
-                  </a>
+                  </OutboundLink>
                 }
               </Spring>
             )}
@@ -218,7 +219,7 @@ const IndexPage = () => {
                 }}
               >
                 {(props) => 
-                  <a href="https://planetazemsausmieva.sk/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
+                  <OutboundLink href="https://planetazemsausmieva.sk/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
                     <div className="projects__overlay planeta-overlay">
                       <h2>Planéta Zem sa usmieva</h2>
                       <div className="projects__tech-wrapper">
@@ -228,7 +229,7 @@ const IndexPage = () => {
                       </div>
                       <Img fluid={data.planeta.childImageSharp.fluid} alt="Planéta Zem sa usmieva" className="projects__img" />
                     </div>
-                  </a>
+                  </OutboundLink>
                 }
               </Spring>
             )}
@@ -245,7 +246,7 @@ const IndexPage = () => {
                 }}
               >
                 {(props) => 
-                  <a href="https://romanakova.cz/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
+                  <OutboundLink href="https://romanakova.cz/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
                     <div className="projects__overlay ambulance-overlay">
                       <h2>Ambulance klinické psychologie</h2>
                       <div className="projects__tech-wrapper">
@@ -256,7 +257,7 @@ const IndexPage = () => {
                       </div>
                       <Img fluid={data.ambulance.childImageSharp.fluid} alt="Ambulance klinické psychologie" className="projects__img" />
                     </div>
-                  </a>
+                  </OutboundLink>
                 }
               </Spring>
             )}
@@ -272,9 +273,9 @@ const IndexPage = () => {
             <Carousel.Caption>
               <img src={debbie} alt="Deborah Romaňáková" />
               <h3>Deborah Romaňáková</h3>
-              <a href="https://tabuga.cz/" target="_blank" rel="noopener noreferrer">
+              <OutboundLink href="https://tabuga.cz/" target="_blank" rel="noopener noreferrer">
                 <h4>tabuga.cz</h4>
-              </a>
+              </OutboundLink>
               <p>“Filip mi byl doporučený jako mladý kreativní chlapec, kterého baví vytvářet digitální podobu firmy. Hlavním zadáním bylo - hravé, jiné, odvážné. To Filip vytvořil.  Duši Tabūgy přenesl na internetové stránky. Poradil si i s mými požadavkami a úpravami. Těším se na další spolupráci.”</p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -283,9 +284,9 @@ const IndexPage = () => {
             <Carousel.Caption>
               <img src={patrik} alt="Patrik Pavlis" />
               <h3>Patrik Pavlis</h3>
-              <a href="https://patrikpavlis.com/" target="_blank" rel="noopener noreferrer">
+              <OutboundLink href="https://patrikpavlis.com/" target="_blank" rel="noopener noreferrer">
                 <h4>patrikpavlis.com</h4>
-              </a>
+              </OutboundLink>
               <p>“Som rád, že som na tvorbu svojho web-portfólia oslovil práve Filipa. Spolupráca bola hneď od začiatku výborná. Najviac ma prekvapoval Filipov prístup. Prichádzal s novými návrhmi a možnosťami ako web posunúť o úroveň ďalej a tak sa aj stalo... Ak hľadáte človeka pre tvorbu Vášho webu, práve ste ho našli. Odporúčam, výsledok jednoducho stojí za to!”</p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -294,10 +295,10 @@ const IndexPage = () => {
             <Carousel.Caption>
               <img src={danka} alt="Danka Moderdovská" />
               <h3>Danka Moderdovská</h3>
-              <a href="https://planetazemsausmieva.sk/" target="_blank" rel="noopener noreferrer">
+              <OutboundLink href="https://planetazemsausmieva.sk/" target="_blank" rel="noopener noreferrer">
                 <h4>planetazemsausmieva.sk</h4>
-              </a>
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et dui eget nibh ultrices lacinia non viverra nunc. In auctor aliquam nisl id malesuada. Sed ac nisl dictum, mollis ante a, tincidunt ex. Aliquam lacinia lacus id purus cursus consectetur. Sed ac leo ipsum.”</p>
+              </OutboundLink>
+              <p>“Filipa som oslovila, keď som súrne potrebovala prerobiť moju webovú stránku s e-shopom. Filip sa chytil roboty a už o pár dní som mala veci nastavené tak, ako bolo treba. Jeho práca bola napriek časovému tlaku precízna a pekná. Vie zruzumiteľne veci vysvetliť a nastaviť podľa reálnej potreby. Vrelo odporúčam, neoľutujete. Ja som nadmieru spokojná a môj web ide konečne ako som si predstavovala.”</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="ref__slide">
@@ -305,10 +306,10 @@ const IndexPage = () => {
             <Carousel.Caption>
               <img src={romanakova} alt="Marta Romaňáková" />
               <h3>Marta Romaňáková</h3>
-              <a href="https://romanakova.cz/" target="_blank" rel="noopener noreferrer">
+              <OutboundLink href="https://romanakova.cz/" target="_blank" rel="noopener noreferrer">
                 <h4>romanakova.cz</h4>
-              </a>
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et dui eget nibh ultrices lacinia non viverra nunc. In auctor aliquam nisl id malesuada. Sed ac nisl dictum, mollis ante a, tincidunt ex. Aliquam lacinia lacus id purus cursus consectetur. Sed ac leo ipsum.”</p>
+              </OutboundLink>
+              <p>“Filip mi byl doporučen pro úpravy mých webových stránek. Tyto stránky byly zastaralé a Filip jim vdechl modernější, šmrncovnější styl. Spolupráce byla absolutně bezproblémová a věcná, současně citlivá. Vážím si toho, že co Filip řekne, to i splní. Nemohu jinak než doporučit. Těším se na další spolupráci. Děkuji, Filipe.”</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
@@ -349,15 +350,15 @@ const IndexPage = () => {
                       </p>
                     </div>
                     <div className="about__social-wrapper" style={{ ...props }}>
-                      <a href="https://www.facebook.com/fillip.jankech" target="_blank" rel="noopener noreferrer">
+                      <OutboundLink href="https://www.facebook.com/fillip.jankech" target="_blank" rel="noopener noreferrer">
                         <RiFacebookBoxFill />
-                      </a>
-                      <a href="https://www.linkedin.com/in/filip-jankech" target="_blank" rel="noopener noreferrer">
+                      </OutboundLink>
+                      <OutboundLink href="https://www.linkedin.com/in/filip-jankech" target="_blank" rel="noopener noreferrer">
                         <RiLinkedinBoxFill />
-                      </a>
-                      <a href="https://www.instagram.com/filipjankech" target="_blank" rel="noopener noreferrer">
+                      </OutboundLink>
+                      <OutboundLink href="https://www.instagram.com/filipjankech" target="_blank" rel="noopener noreferrer">
                         <AiFillInstagram />
-                      </a>
+                      </OutboundLink>
                     </div>
                   </>
                 }

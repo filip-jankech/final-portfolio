@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Header from "./header"
 import "./layout.scss"
@@ -55,15 +56,15 @@ const Layout = ({ children }) => {
               <span className="footer__claim">© {new Date().getFullYear()} | všetky práva vyhradené</span>
             </div> 
             <div className="footer__social-wrapper">
-              <a href="https://www.facebook.com/fillip.jankech" target="_blank" rel="noopener noreferrer">
+              <OutboundLink href="https://www.facebook.com/fillip.jankech" target="_blank" rel="noopener noreferrer">
                 <RiFacebookBoxFill />
-              </a>
-              <a href="https://www.linkedin.com/in/filip-jankech" target="_blank" rel="noopener noreferrer">
+              </OutboundLink>
+              <OutboundLink href="https://www.linkedin.com/in/filip-jankech" target="_blank" rel="noopener noreferrer">
                 <RiLinkedinBoxFill />
-              </a>
-              <a href="https://www.instagram.com/filipjankech" target="_blank" rel="noopener noreferrer">
+              </OutboundLink>
+              <OutboundLink href="https://www.instagram.com/filipjankech" target="_blank" rel="noopener noreferrer">
                 <AiFillInstagram />
-              </a>
+              </OutboundLink>
             </div>
           </div>
         </footer>

@@ -873,7 +873,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   @media (max-width: 619px) {
     -webkit-box-orient: vertical;
@@ -1138,6 +1138,24 @@ main {
 .ambulance-overlay {
   .projects__tech-wrapper {
     top: 60%;
+
+    @media (max-width: 469px) {
+      top: 65%;
+    }
+  }
+}
+
+.ambulance-overlay {
+  .projects__tech-wrapper {
+    @media (max-width: 417px) {
+      top: 75%;
+    }
+  }
+
+  h2 {
+    @media (max-width: 417px) {
+      top: 20%;
+    }
   }
 }
 
@@ -1169,20 +1187,60 @@ main {
     min-height: 600px;
   }
 
-  @media (max-width: 670px) {
-    min-height: 630px;
+  @media (max-width: 1351px) {
+    min-height: 620px;
+  }
+
+  @media (max-width: 1099px) {
+    min-height: 640px;
+  }
+
+  @media (max-width: 1049px) {
+    min-height: 600px;
+  }
+
+  @media (max-width: 848px) {
+    min-height: 620px;
+  }
+
+  @media (max-width: 733px) {
+    min-height: 650px;
+  }
+
+  @media (max-width: 655px) {
+    min-height: 670px;
   }
 
   @media (max-width: 599px) {
-    min-height: 670px;
+    min-height: 680px;
+  }
+
+  @media (max-width: 524px) {
+    min-height: 690px;
   }
 
   @media (max-width: 499px) {
     min-height: 720px;
   }
-  
-  @media (max-width: 399px) {
+
+  @media (max-width: 448px) {
+    min-height: 780px;
+  }
+
+  @media (max-width: 424px) {
     min-height: 800px;
+  }
+  
+  @media (max-width: 415px) {
+    min-height: 840px;
+  }
+
+  @media (max-width: 399px) {
+    min-height: 860px;
+  }
+
+  @media (max-width: 366px) {
+    min-height: 900px;
   }
 }
 
@@ -1215,7 +1273,7 @@ main {
       margin-bottom: 3rem;
 
       @media (max-width: 619px) {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
 
