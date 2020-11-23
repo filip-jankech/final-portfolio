@@ -2,7 +2,6 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { Container, Navbar, Nav } from 'react-bootstrap'
-import { graphql, useStaticQuery } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { useSpring, animated } from 'react-spring'
 

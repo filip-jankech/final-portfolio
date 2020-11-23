@@ -13,8 +13,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
             title
             description
             author
-            keywords
-            siteUrl
+            siteURL
           }
         }
       }
@@ -26,7 +25,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
     metaImage && metaImage.src
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
       : null
-  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+  const canonical = pathname ? `${site.siteMetadata.siteURL}${pathname}` : null
 
   return (
     <Helmet
@@ -34,7 +33,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s` : null}
+      titleTemplate={site.siteMetadata.title ? `%s` : null}
       link={
         canonical
           ? [
@@ -49,10 +48,6 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
         {
           name: `description`,
           content: metaDescription,
-        },
-        {
-          name: "keywords",
-          content: site.siteMetadata.keywords.join(","),
         },
         {
           property: `og:title`,

@@ -32,6 +32,12 @@ const Layout = ({ children }) => {
     }
   `)
 
+  function Mailto({ email, className, ...props }) {
+    return (
+      <a href={`mailto:${email}`} class={className}>{props.children}</a>
+    );
+  }
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
@@ -54,6 +60,7 @@ const Layout = ({ children }) => {
                 <span>Filip Jankech</span>
               </AnchorLink>
               <span className="footer__claim">© {new Date().getFullYear()} | všetky práva vyhradené</span>
+              <Mailto email="filip.jankech@gmail.com" className="footer__email">filip.jankech@gmail.com</Mailto>
             </div> 
             <div className="footer__social-wrapper">
               <OutboundLink href="https://www.facebook.com/fillip.jankech" target="_blank" rel="noopener noreferrer">

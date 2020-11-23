@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: `Filip Jankech`,
-    description: `Ahoj, volám sa Filip. Navrhnem a vytvorím pre Vás pekný, rýchly a spoľahlivý web.`,
+    description: `Ahoj, volám sa Filip. Navrhnem a vytvorím pre Vás rýchly, spoľahlivý a atraktívny web.`,
     author: `Filip Jankech`,
     image: `/social.jpg`,
-    keywords: `[webová stránka, web, webstránka, e-shop, eshop, tvorba, návrh, developer, dizajnér, programátor]`
+    siteURL: `https://filipjankech.com`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "G-QNHEWKKFFW",
+        trackingId: "UA-183806138-1",
         head: true,
         anonymize: true,
         pageTransitionDelay: 0,
