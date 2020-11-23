@@ -4,6 +4,7 @@ module.exports = {
     description: `Ahoj, volám sa Filip. Navrhnem a vytvorím pre Vás pekný, rýchly a spoľahlivý web.`,
     author: `Filip Jankech`,
     image: `/social.jpg`,
+    keywords: `[webová stránka, web, webstránka, e-shop, eshop, tvorba, návrh, developer, dizajnér, programátor]`
   },
   plugins: [
     {
