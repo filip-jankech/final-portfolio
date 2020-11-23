@@ -37,7 +37,7 @@ function SEO({ description, lang, meta, title, image }) {
           content: metaDescription,
         },
         {
-          name: `picture`,
+          name: `image`,
           content: metaImage,
         },
         {
