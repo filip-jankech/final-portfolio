@@ -4,7 +4,6 @@ module.exports = {
     title: `Filip Jankech`,
     description: `Ahoj, volám sa Filip. Navrhnem a vytvorím pre Vás rýchly, spoľahlivý a atraktívny web.`,
     author: `Filip Jankech`,
-    image: `/social.jpg`,
     siteURL: `https://filipjankech.com`,
   },
   plugins: [

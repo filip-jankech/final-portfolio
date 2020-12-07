@@ -79,7 +79,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
             ? [
                 {
                   property: "og:image",
-                  content: image,
+                  content: "http://filipjankech.com/social.jpg",
                 },
                 {
                   property: "og:image:width",
