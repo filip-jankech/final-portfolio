@@ -77,6 +77,14 @@ const IndexPage = () => {
           }
         }
       },
+      kworld: file(relativePath: {eq: "k-world.jpg"}) {
+        id
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       slider: file(relativePath: {eq: "slider.png"}) {
         id
         childImageSharp {
@@ -256,6 +264,33 @@ const IndexPage = () => {
                         <SiNetlify />
                       </div>
                       <Img fluid={data.ambulance.childImageSharp.fluid} alt="Ambulance klinické psychologie" className="projects__img" />
+                    </div>
+                  </OutboundLink>
+                }
+              </Spring>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor partialVisibility offset={{ bottom: -100 }} once>
+            {({ isVisible }) => (
+              <Spring
+                delay={250}
+                to={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible
+                    ? "translateX(0)"
+                    : "translateX(100px)",
+                }}
+              >
+                {(props) => 
+                  <OutboundLink href="https://www.k-world.sk" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
+                    <div className="projects__overlay k-world-overlay">
+                      <h2>K-World</h2>
+                      <div className="projects__tech-wrapper">
+                        <ImWordpress />
+                        <SiWoo />
+                        <SiPhp />
+                      </div>
+                      <Img fluid={data.kworld.childImageSharp.fluid} alt="K-World" className="projects__img" />
                     </div>
                   </OutboundLink>
                 }

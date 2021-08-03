@@ -1100,7 +1100,8 @@ main {
 }
 
 .tabuga-overlay,
-.planeta-overlay {
+.planeta-overlay,
+.k-world-overlay {
   background: rgb(45,107,119);
   background: -webkit-gradient(linear, left top, right top, from(rgba(32,34,37,1)), to(rgba(45,107,119,1)));
   background: -o-linear-gradient(left, rgba(32,34,37,1) 0%, rgba(45,107,119,1) 100%);
