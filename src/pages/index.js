@@ -323,7 +323,7 @@ const IndexPage = () => {
                       <div className="projects__tech-wrapper">
                         <ImWordpress />
                         <SiWoo />
-                        <SiPhp />
+                        <FaElementor />
                       </div>
                       <Img fluid={data.remeslo.childImageSharp.fluid} alt="Remeslo" className="projects__img" />
                     </div>
