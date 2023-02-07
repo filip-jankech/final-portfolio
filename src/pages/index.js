@@ -53,7 +53,7 @@ const IndexPage = () => {
           }
         }
       },
-      pavlis: file(relativePath: {eq: "pavlis.jpg"}) {
+      bamyca: file(relativePath: {eq: "bamyca.jpg"}) {
         id
         childImageSharp {
           fluid(maxWidth: 800) {
@@ -207,16 +207,68 @@ const IndexPage = () => {
                 }}
               >
                 {(props) => 
-                  <OutboundLink href="https://patrikpavlis.com/" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
-                    <div className="projects__overlay pavlis-overlay">
-                      <h2>Patrik Pavlis</h2>
+                  <OutboundLink href="https://www.bamyca.com" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
+                    <div className="projects__overlay bamyca-overlay">
+                      <h2>Bamyca</h2>
                       <div className="projects__tech-wrapper">
-                        <SiJavascript />
-                        <SiJquery />
-                        <FaSass />
-                        <SiFirebase />
+                        <ImWordpress />
+                        <SiPhp />
                       </div>
-                      <Img fluid={data.pavlis.childImageSharp.fluid} alt="Patrik Pavlis" className="projects__img" />
+                      <Img fluid={data.bamyca.childImageSharp.fluid} alt="Bamyca" className="projects__img" />
+                    </div>
+                  </OutboundLink>
+                }
+              </Spring>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor partialVisibility offset={{ bottom: -100 }} once>
+            {({ isVisible }) => (
+              <Spring
+                delay={250}
+                to={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible
+                    ? "translateX(0)"
+                    : "translateX(100px)",
+                }}
+              >
+                {(props) => 
+                  <OutboundLink href="https://www.k-world.sk" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
+                    <div className="projects__overlay k-world-overlay">
+                      <h2>K-World</h2>
+                      <div className="projects__tech-wrapper">
+                        <ImWordpress />
+                        <SiWoo />
+                        <SiPhp />
+                      </div>
+                      <Img fluid={data.kworld.childImageSharp.fluid} alt="K-World" className="projects__img" />
+                    </div>
+                  </OutboundLink>
+                }
+              </Spring>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor partialVisibility offset={{ bottom: -100 }} once>
+            {({ isVisible }) => (
+              <Spring
+                delay={250}
+                to={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible
+                    ? "translateX(0)"
+                    : "translateX(100px)",
+                }}
+              >
+                {(props) => 
+                  <OutboundLink href="https://www.remeslobratislava.sk" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
+                    <div className="projects__overlay remeslo-overlay">
+                      <h2>Remeslo</h2>
+                      <div className="projects__tech-wrapper">
+                        <ImWordpress />
+                        <SiPhp />
+                        <FaElementor />
+                      </div>
+                      <Img fluid={data.remeslo.childImageSharp.fluid} alt="Remeslo" className="projects__img" />
                     </div>
                   </OutboundLink>
                 }
@@ -272,60 +324,6 @@ const IndexPage = () => {
                         <SiNetlify />
                       </div>
                       <Img fluid={data.ambulance.childImageSharp.fluid} alt="Ambulance klinické psychologie" className="projects__img" />
-                    </div>
-                  </OutboundLink>
-                }
-              </Spring>
-            )}
-          </VisibilitySensor>
-          <VisibilitySensor partialVisibility offset={{ bottom: -100 }} once>
-            {({ isVisible }) => (
-              <Spring
-                delay={250}
-                to={{
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible
-                    ? "translateX(0)"
-                    : "translateX(100px)",
-                }}
-              >
-                {(props) => 
-                  <OutboundLink href="https://www.k-world.sk" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
-                    <div className="projects__overlay k-world-overlay">
-                      <h2>K-World</h2>
-                      <div className="projects__tech-wrapper">
-                        <ImWordpress />
-                        <SiWoo />
-                        <SiPhp />
-                      </div>
-                      <Img fluid={data.kworld.childImageSharp.fluid} alt="K-World" className="projects__img" />
-                    </div>
-                  </OutboundLink>
-                }
-              </Spring>
-            )}
-          </VisibilitySensor>
-          <VisibilitySensor partialVisibility offset={{ bottom: -100 }} once>
-            {({ isVisible }) => (
-              <Spring
-                delay={250}
-                to={{
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible
-                    ? "translateX(0)"
-                    : "translateX(100px)",
-                }}
-              >
-                {(props) => 
-                  <OutboundLink href="https://www.remeslobratislava.sk" target="_blank" rel="noopener noreferrer" style={{ ...props }}>
-                    <div className="projects__overlay remeslo-overlay">
-                      <h2>Remeslo</h2>
-                      <div className="projects__tech-wrapper">
-                        <ImWordpress />
-                        <SiPhp />
-                        <FaElementor />
-                      </div>
-                      <Img fluid={data.remeslo.childImageSharp.fluid} alt="Remeslo" className="projects__img" />
                     </div>
                   </OutboundLink>
                 }
